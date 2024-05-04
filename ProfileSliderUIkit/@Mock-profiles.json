@@ -1,0 +1,39 @@
+{
+    "mock": {
+        "status": 200,
+        "method": "GET",
+        "urlPath": "/profiles",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    },
+    "data": {
+        "users": [
+            {
+                "name": "Feridun Erbas",
+                "age": 30,
+                "height": "5'9\"",
+                "profileImage": "https://hips.hearstapps.com/hmg-prod/images/street-portrait-of-a-young-man-using-mobile-phone-royalty-free-image-1018047498-1564431457.jpg?crop=0.668xw:1.00xh;0.226xw,0&resize=1200:*",
+                "profession": "Software Engineer",
+                "degree": "Bachelor's in Computer Science"
+            },
+            {
+                "name": "Alice Johnson",
+                "age": 28,
+                "height": "5'6\"",
+                "profileImage": "https://attractmorematches.com/wp-content/uploads/2023/10/Screenshot-2023-10-18-at-5.10.53-PM.png",
+                "profession": "Data Analyst",
+                "degree": "Master's in Statistics"
+            },
+            {
+                "name": "John Smith",
+                "age": 35,
+                "height": "6'0\"",
+                "profileImage": "https://killyourinnerloser.com/wp-content/uploads/cache/2018/12/1-10/2094549241.jpg",
+                "profession": "Doctor",
+                "degree": "Doctor of Medicine (MD)"
+            }
+        ]
+    }
+}
+
