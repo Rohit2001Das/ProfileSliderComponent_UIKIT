@@ -20,6 +20,7 @@ class ProfileSliderViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ProfileCell")
         collectionView.backgroundColor = .white
+        collectionView.isPagingEnabled = true
         view.addSubview(collectionView)
         
        
@@ -30,11 +31,11 @@ class ProfileSliderViewController: UIViewController {
     
     private func createLayout() -> UICollectionViewLayout {
       
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.9))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(600))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 1)
         
         let section = NSCollectionLayoutSection(group: group)
@@ -69,7 +70,7 @@ extension ProfileSliderViewController: UICollectionViewDataSource, UICollectionV
                 imageView.translatesAutoresizingMaskIntoConstraints = false
                 imageView.contentMode = .scaleAspectFill
                 imageView.clipsToBounds = true
-                imageView.layer.cornerRadius = 20
+                imageView.layer.cornerRadius = 25
                 cell.contentView.addSubview(imageView)
                 
                 NSLayoutConstraint.activate([
